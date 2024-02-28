@@ -15,6 +15,13 @@ console.log(sum);
 }
 
 solve(3222222);
+
+// Strings
+function solve(number){
+let numberToText= number.toString();
+let currentDigit = numberToText[0]
+}
+
 // console.log(solve(1234));
 // const solve = require('./your_file_containing_solve_function');
 
