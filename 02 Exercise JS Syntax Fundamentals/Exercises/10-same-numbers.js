@@ -1,25 +1,34 @@
-function solve(number){
-    let firstDigit = number%10;
+function solve(number) {
+    let firstDigit = number % 10;
     let sum = 0;
     let sameDigits = true;
-    while(number){ 
-        sum = sum+number%10;
-        if (number%10!==firstDigit) {
+    while (number) {
+        sum = sum + number % 10;
+        if (number % 10 !== firstDigit) {
             sameDigits = false;
         }
-        number = Math.floor(number/10);
+        number = Math.floor(number / 10);
     }
-    
-console.log(sameDigits);
-console.log(sum);
+
+    console.log(sameDigits);
+    console.log(sum);
 }
 
 solve(3222222);
 
 // Strings
-function solve(number){
-let numberToText= number.toString();
-let currentDigit = numberToText[0]
+function solve(number) {
+    let numberToText = number.toString();
+    let currentDigit = numberToText[0]
+    let isSame = true;
+    let sum = number(currentDigit);
+    for (let i = 1; 1 < numberToText.length; i++) {
+        if (currentDigit !== numberToText[i]) {
+            isSame = false;
+        }
+        currentDigit = numberToText[i];
+        sum += number(currentDigit);
+    }
 }
 
 // console.log(solve(1234));
